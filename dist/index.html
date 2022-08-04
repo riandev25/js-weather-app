@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/76866f5b07.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <!-- <script src="main.js" defer></script> -->
+
+  <script src="main.js" defer></script>
+
+  
+
+</head>
+<body>
+  <div class="content">
+    <div class="first-section">
+      <div class="input-section">
+        <h1 class="title"></h1>
+        <p class="city">Sariaya</p>
+        <p>Monday, 2nd Aug 22</p>
+        <p class="time">3:05 pm</p>
+        <h1 class="temp"></h1>
+        <p class="temp-conversion">Display: °C</p>
+        <img src="#" id='generated-main-icon'>
+        <form action ="#">
+          <input class="input-location" type="text" placeholder="Search location...">
+        </form>
+      </div>
+      <div class="display-section">
+        <ul class="display-icons">
+          <img src="images/feels-like.svg" alt="feels-like" class="icons">
+          <img src="images/humidity.svg" alt="humidity" class="icons">
+          <img src="images/chance-of-rain.svg" alt="feels-like" class="icons">
+          <img src="images/wind-speed.svg" alt="feels-like" class="icons">
+        </ul>
+        <ul class="display-text-list">
+          <span class="display-text">Feels like<br><span class="display-text-output" id="feels-like"></span>
+          <span class="display-text">Humidity<br><span class="display-text-output" id="humidity"></span>
+          <span class="display-text">Chance of rain<br><span class="display-text-output" id="chance-of-rain">0.1 %</span>
+          <span class="display-text">Wind speed<br><span class="display-text-output" id="wind-speed">20.3 mph</span>
+        </ul>
+      </div>
+      
+    </div>
+    <div class="second-section" data-carousel>
+      <div class="options">
+        <button class='options-buttons'>Daily</button>
+        <button class='options-buttons'>Hourly</button>
+        <img class="nav-button prev-next" id="prev" src="images/carousel-buttons/arrow-left.svg" data-carousel-button="prev"></img>
+        <img class="nav-button" src="images/carousel-buttons/dot.svg"></img>
+        <img class="nav-button" src="images/carousel-buttons/dot.svg"></img>
+        <img class="nav-button" src="images/carousel-buttons/dot.svg"></img>
+        <img class="nav-button prev-next" src="images/carousel-buttons/arrow-right.svg" data-carousel-button="next"></img>
+      </div>
+
+      <div class="slides" data-slides>
+        <div class="week-weather slide" data-active>
+          <div class="day-weather">
+            <h3 class="day-carousel">Monday</h3>
+            <p class="temperature-carousel">15 °C<br><span class="temperature-carousel-lowest">11 °C</span></p>
+            <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
+          </div>
+          <div class="day-weather">
+            <h3 class="day-carousel">Monday</h3>
+            <p class="temperature-carousel">15 °C<br><span class="temperature-carousel-lowest">11 °C</span></p>
+            <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
+          </div>
+          <div class="day-weather">
+            <h3 class="day-carousel">Monday</h3>
+            <p class="temperature-carousel">15 °C<br><span class="temperature-carousel-lowest">11 °C</span></p>
+            <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
+          </div>
+          <div class="day-weather">
+            <h3 class="day-carousel">Monday</h3>
+            <p class="temperature-carousel">15 °C<br><span class="temperature-carousel-lowest">11 °C</span></p>
+            <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
+          </div>
+          <div class="day-weather">
+            <h3 class="day-carousel">Monday</h3>
+            <p class="temperature-carousel">15 °C<br><span class="temperature-carousel-lowest">11 °C</span></p>
+            <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
+          </div>
+          <div class="day-weather">
+            <h3 class="day-carousel">Monday</h3>
+            <p class="temperature-carousel">15 °C<br><span class="temperature-carousel-lowest">11 °C</span></p>
+            <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
+          </div>
+          <div class="day-weather">
+            <h3 class="day-carousel">Monday</h3>
+            <p class="temperature-carousel">15 °C<br><span class="temperature-carousel-lowest">11 °C</span></p>
+            <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
+          </div>
+        </div>
+
+
+  
+        <!-- <div class="daily-weather slide">
+          <div class="day-weather">
+            <h3 class="day-carousel">1 am</h3>
+            <p class="temperature-carousel">15 °C</p>
+            <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
+          </div>
+          <div class="day-weather">
+            <h3 class="day-carousel">2 am</h3>
+            <p class="temperature-carousel">15 °C</p>
+            <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
+          </div>
+          <div class="day-weather">
+            <h3 class="day-carousel">3 am</h3>
+            <p class="temperature-carousel">15 °C</p>
+            <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
+          </div>
+          <div class="day-weather">
+            <h3 class="day-carousel">4 am</h3>
+            <p class="temperature-carousel">15 °C</p>
+            <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
+          </div>
+          <div class="day-weather">
+            <h3 class="day-carousel">5 am</h3>
+            <p class="temperature-carousel">15 °C</p>
+            <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
+          </div>
+          <div class="day-weather">
+            <h3 class="day-carousel">6 am</h3>
+            <p class="temperature-carousel">15 °C</p>
+            <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
+          </div>
+          <div class="day-weather">
+            <h3 class="day-carousel">7 am</h3>
+            <p class="temperature-carousel">15 °C</p>
+            <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
+          </div>
+          <div class="day-weather">
+            <h3 class="day-carousel">8 am</h3>
+            <p class="temperature-carousel">15 °C</p>
+            <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
+          </div>
+        </div> -->
+      </div>
+
+
+    </div>
+  </div>
+  <template>
+    <div class="day-weather" id="day-weather-template">
+      <h3 class="day-carousel">Monday</h3>
+      <p class="temperature-carousel">15 °C<br><span class="temperature-carousel-lowest">11 °C</span></p>
+      <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
+    </div>
+  </template>
+</body>
+</html>

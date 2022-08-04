@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,900;1,400;1,900&display=swap');
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #fff
+}
+
+:root {
+  --font-family: Montserrat, sans-serif;
+  --font-display-text: 11px;
+  --font-display-text-output: 23px;
+  --font-weight: bold;
+  --font-size-date-time: 15px;
+  --font-weight-date-time: 500;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family)
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./images/dark-forest.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 60px 60px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: calc(100vh - 120px);
+  border: none;
+}
+
+.first-section {
+  width: 100%;
+  min-height: 390px;
+  display: flex;
+}
+
+.input-section {
+  /* background-color: lightgreen; */
+  width: 80%;
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+}
+
+h1.title {
+  font-weight: 500;
+  font-size: 40px;
+  margin-bottom: 7px;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+p {
+  font-size: var(--font-size-date-time);
+  font-weight: var(--font-weight-date-time);
+}
+
+p.city {
+  margin-bottom: 7px;
+}
+
+p.time {
+  margin-bottom: 15px;
+}
+
+h1.temp {
+  font-size: 52px;
+  font-weight: var(--font-weight);
+  margin-bottom: 0;
+}
+
+p.temp-conversion {
+  font-size: 12px;
+}
+
+#generated-main-icon {
+  width: 100px;
+  margin-top: 10px;
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+
+input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid white;
+  margin-top: 15px;
+  width: 215px;
+  padding: 8px 0 5px 13px;
+  font-weight: 700;
+}
+
+::placeholder {
+  color: #ffff;
+
+}
+
+
+.display-section {
+  /* background-color: lightcoral; */
+  display: flex;
+  width: 160px;
+}
+
+ul.display-icons {
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 34px;
+  width: 48px;
+}
+
+ul.display-icons:first-child {
+  margin-top: 6px;
+}
+.icons {
+  width: 38px;
+}
+
+/* ul.display-text {
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 30px;
+} */
+
+span.display-text {
+  line-height: 28px;
+  font-size: var(--font-display-text);
+}
+
+span.display-text-output {
+  display: block;
+  font-size: var(--font-display-text-output);
+  font-weight: var(--font-weight);
+  margin-bottom: 15px;
+}
+
+
+.second-section {
+  display: flex;
+  flex: 1;
+  flex-flow: column wrap;
+  max-width: 100%;
+  height: 500px;
+  position: relative;
+
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  /* position: absolute;
+  top: 30px */
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  
+}
+
+.options-buttons {
+  background: none;
+  padding: 5px 12px;
+  border: 1px solid #ffff;
+  border-radius: 4px;
+  margin-right: 28px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nav-button {
+  background: none;
+  font-weight: 700;
+  width: 10px;
+  margin-right: 7px;
+}
+
+.prev-next {
+  width: 13px;
+}
+
+
+
+div.week-weather {
+  /* background-color: red; */
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  flex: 1;
+  position: absolute;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  transition-delay: 0ms;
+}
+
+.slide {
+  width: 100%;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 0ms;
+}
+
+
+
+div.daily-weather {
+  /* background-color: red; */
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  flex: 1;
+  position: absolute;
+}
+
+div.day-weather {
+  /* border: 1px solid white; */
+  display: grid;
+  padding-left: 30%;
+}
+
+.day-carousel {
+  font-size: 19px;
+  font-weight: 500;
+  margin-top: 25px;
+  margin-bottom: 16px;
+}
+
+.temperature-carousel {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.temperature-carousel-lowest {
+  font-size: 12px;
+}
+
+.weather-carousel-icon {
+  width: 47px;
+  margin-top: 13px;
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    padding: 40px 40px;
+  }
+
+  .first-section {
+    width: 100%;
+    min-height: 465px;
+    display: flex;
+  }
+
+  h1.title {
+    font-weight: 500;
+    font-size: 32px;
+    margin-bottom: 6px;
+  }
+
+  p {
+    font-size: 13px;
+    font-weight: var(--font-weight-date-time);
+  }
+  
+  p.city {
+    margin-bottom: 7px;
+  }
+  
+  p.time {
+    margin-bottom: 13px;
+  }
+  
+  h1.temp {
+    font-size: 47px;
+    font-weight: var(--font-weight);
+    margin-bottom: 0;
+  }
+  
+  p.temp-conversion {
+    font-size: 11px;
+  }
+  
+  #cloudy {
+    width: 90px;
+  }
+
+  input {
+    margin-top: 13px;
+    width: 190px;
+    padding: 8px 0 4px 12px;
+    font-weight: 700;
+  }
+
+  ::placeholder {
+    font-size: 12px;
+  }
+
+
+  .display-section {
+    width: 145px;
+  }
+  
+  ul.display-icons {
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 32px;
+    width: 43px;
+  }
+  
+  ul.display-icons:first-child {
+    margin-top: 6px;
+  }
+  .icons {
+    width: 32px;
+  }
+  
+  span.display-text {
+    line-height: 25px;
+    font-size: 11px;
+  }
+  
+  span.display-text-output {
+    font-size: 21px;
+    margin-bottom: 12px;
+  }
+
+
+  
+  .options-buttons {
+    padding: 6px 12px;
+    margin-right: 25px;
+    font-size: 12px;
+  }
+  
+  .nav-button {
+    font-weight: 700;
+    width: 7px;
+    margin-right: 8px;
+  }
+  
+  .prev-next {
+    width: 10px;
+  }
+  
+  div.day-weather {
+    padding-left: 20%;
+  }
+  
+  .day-carousel {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 23px;
+    margin-bottom: 8px;
+  }
+  
+  .temperature-carousel {
+    font-size: 24px;
+    line-height: 20px;
+  }
+  
+  .temperature-carousel-lowest {
+    font-size: 11px;
+  }
+  
+  .weather-carousel-icon {
+    width: 40px;
+    margin-top: 8px;
+  }
+}
+
+@media only screen and (max-width: 683px) {
+  body {
+    padding: 26px 26px;
+  }
+
+  .first-section {
+    min-height: 510px;
+  }
+
+  h1.title {
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 4px;
+  }
+
+  p {
+    font-size: 9px;
+    font-weight: var(--font-weight-date-time);
+  }
+  
+  p.city {
+    font-size: 12px;
+    margin-bottom: 7px;
+  }
+  
+  p.time {
+    margin-bottom: 8px;
+  }
+  
+  h1.temp {
+    font-size: 38px;
+    font-weight: var(--font-weight);
+    margin-bottom: 2px;
+  }
+  
+  p.temp-conversion {
+    font-size: 10px;
+  }
+  
+  #cloudy {
+    width: 75px;
+    margin-top: 17px;
+  }
+
+  input {
+    margin-top: 10px;
+    width: 170px;
+    padding: 8px 0 4px 12px;
+    font-weight: 700;
+  }
+
+  ::placeholder {
+    font-size: 10px;
+  }
+
+
+  .display-section {
+    width: 122px; /* adasd */
+  }
+  
+  ul.display-icons {
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 32px;
+    width: 30px;
+  }
+  
+  ul.display-icons:first-child {
+    margin-top: 6px;
+  }
+  .icons {
+    width: 23px;
+  }
+  
+  span.display-text {
+    line-height: 20px;
+    font-size: 9px;
+    font-weight: 500;
+  }
+  
+  span.display-text-output {
+    font-size: 18px;
+    margin-bottom: 11px;
+  }
+
+
+  
+  .options-buttons {
+    padding: 5px 10px;
+    margin-right: 16px;
+    font-size: 9px;
+  }
+  
+  .nav-button {
+    font-weight: 700;
+    width: 7px;
+    margin-right: 6px;
+  }
+  
+  .prev-next {
+    width: 7px;
+  }
+  
+  div.day-weather {
+    padding-left: 10%;
+    line-height: 5px;
+  }
+  
+  .day-carousel {
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 13px;
+  }
+  
+  .temperature-carousel {
+    font-size: 17px;
+    line-height: 18px;
+  }
+  
+  .temperature-carousel-lowest {
+    font-size: 10px;
+  }
+  
+  .weather-carousel-icon {
+    width: 33px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .first-section {
+    min-height: 300px;
+  }
+
+  .options {
+    justify-content: center;
+    align-items: center;
+  }
+
+  div.week-weather {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .day-weather:first-child {
+    margin-top: 25px;
+  }
+
+  div.day-weather {
+    display: grid;
+    grid-template-columns: 2.6fr 1fr 1.2fr;
+  }
+
+  .day-carousel {
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 13px;
+    margin-left: 30px;
+  }
+}
