@@ -11,40 +11,42 @@
 
   <script src="main.js" defer></script>
 
-  
 
 </head>
 <body>
   <div class="content">
     <div class="first-section">
+      <!-- <div class="metric" data-active> -->
       <div class="input-section">
-        <h1 class="title"></h1>
-        <p class="city">Sariaya</p>
-        <p>Monday, 2nd Aug 22</p>
-        <p class="time">3:05 pm</p>
-        <h1 class="temp"></h1>
-        <p class="temp-conversion">Display: °C</p>
-        <img src="#" id='generated-main-icon'>
+        <h1 class="title" data-weather-description></h1>
+        <p class="city" data-city-name></p>
+        <p><span data-days></span><span data-date></span></p>
+        <p class="time"><span data-time></span></p>
+        <h1 class="temp" data-temp-metric></h1>
+        <!-- <p class="temp-conversion" data-conversion>Display: °C</p> -->
+        <img src="#" id="generated-main-icon" data-main-icon>
         <form action ="#">
-          <input class="input-location" type="text" placeholder="Search location...">
+          <input class="input-location" data-input-location type="text" placeholder="Search location...">
         </form>
       </div>
       <div class="display-section">
         <ul class="display-icons">
           <img src="images/feels-like.svg" alt="feels-like" class="icons">
           <img src="images/humidity.svg" alt="humidity" class="icons">
-          <img src="images/chance-of-rain.svg" alt="feels-like" class="icons">
-          <img src="images/wind-speed.svg" alt="feels-like" class="icons">
+          <img src="images/max-temp.svg" alt="max-temp" class="icons">
+          <img src="images/min-temp.svg" alt="min-temp" class="icons">
+          <img src="images/wind-speed.svg" alt="wind-speed" class="icons">
         </ul>
         <ul class="display-text-list">
-          <span class="display-text">Feels like<br><span class="display-text-output" id="feels-like"></span>
-          <span class="display-text">Humidity<br><span class="display-text-output" id="humidity"></span>
-          <span class="display-text">Chance of rain<br><span class="display-text-output" id="chance-of-rain">0.1 %</span>
-          <span class="display-text">Wind speed<br><span class="display-text-output" id="wind-speed">20.3 mph</span>
+          <span class="display-text">Feels like<br><span class="display-text-output" data-feels-like-metric></span>
+          <span class="display-text">Humidity<br><span class="display-text-output" data-humidity></span>
+          <span class="display-text">Max temperature<br><span class="display-text-output" data-max-temp-metric></span>
+          <span class="display-text">Min temperature<br><span class="display-text-output" data-min-temp-metric></span>
+          <span class="display-text">Wind speed<br><span class="display-text-output" data-wind-speed></span>
         </ul>
       </div>
-      
     </div>
+
     <div class="second-section" data-carousel>
       <div class="options">
         <button class='options-buttons'>Daily</button>
@@ -54,12 +56,13 @@
         <img class="nav-button" src="images/carousel-buttons/dot.svg"></img>
         <img class="nav-button" src="images/carousel-buttons/dot.svg"></img>
         <img class="nav-button prev-next" src="images/carousel-buttons/arrow-right.svg" data-carousel-button="next"></img>
+        <p class="temp-conversion" data-conversion>Display: °C</p>
       </div>
 
       <div class="slides" data-slides>
         <div class="week-weather slide" data-active>
           <div class="day-weather">
-            <h3 class="day-carousel">Monday</h3>
+            <h3 class="day-carousel">Sunday</h3>
             <p class="temperature-carousel">15 °C<br><span class="temperature-carousel-lowest">11 °C</span></p>
             <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
           </div>
@@ -69,27 +72,27 @@
             <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
           </div>
           <div class="day-weather">
-            <h3 class="day-carousel">Monday</h3>
+            <h3 class="day-carousel">Tuesday</h3>
             <p class="temperature-carousel">15 °C<br><span class="temperature-carousel-lowest">11 °C</span></p>
             <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
           </div>
           <div class="day-weather">
-            <h3 class="day-carousel">Monday</h3>
+            <h3 class="day-carousel">Wednesday</h3>
             <p class="temperature-carousel">15 °C<br><span class="temperature-carousel-lowest">11 °C</span></p>
             <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
           </div>
           <div class="day-weather">
-            <h3 class="day-carousel">Monday</h3>
+            <h3 class="day-carousel">Thursday</h3>
             <p class="temperature-carousel">15 °C<br><span class="temperature-carousel-lowest">11 °C</span></p>
             <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
           </div>
           <div class="day-weather">
-            <h3 class="day-carousel">Monday</h3>
+            <h3 class="day-carousel">Friday</h3>
             <p class="temperature-carousel">15 °C<br><span class="temperature-carousel-lowest">11 °C</span></p>
             <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
           </div>
           <div class="day-weather">
-            <h3 class="day-carousel">Monday</h3>
+            <h3 class="day-carousel">Saturday</h3>
             <p class="temperature-carousel">15 °C<br><span class="temperature-carousel-lowest">11 °C</span></p>
             <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
           </div>
@@ -97,7 +100,7 @@
 
 
   
-        <!-- <div class="daily-weather slide">
+        <div class="daily-weather slide">
           <div class="day-weather">
             <h3 class="day-carousel">1 am</h3>
             <p class="temperature-carousel">15 °C</p>
@@ -138,7 +141,7 @@
             <p class="temperature-carousel">15 °C</p>
             <img class="weather-carousel-icon" src="images/chance-of-rain.svg"></img>
           </div>
-        </div> -->
+        </div>
       </div>
 
 

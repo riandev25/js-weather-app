@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,900;1,400;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,900;1,400;1,900&display=swap");
 
 *,
 ::before,
@@ -6,7 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #fff
+  color: #fff;
 }
 
 :root {
@@ -22,14 +22,14 @@ body,
 html {
   margin: 0;
   padding: 0;
-  font-family: var(--font-family)
+  font-family: var(--font-family);
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('./images/dark-forest.jpg');
+  background-image: url("./images/dark-forest.jpg");
   background-size: cover;
   background-attachment: fixed;
   padding: 60px 60px;
@@ -47,10 +47,10 @@ body {
   width: 100%;
   min-height: 390px;
   display: flex;
+  position: relative;
 }
 
 .input-section {
-  /* background-color: lightgreen; */
   width: 80%;
   display: flex;
   flex-flow: column;
@@ -88,6 +88,7 @@ h1.temp {
 
 p.temp-conversion {
   font-size: 12px;
+  cursor: pointer;
 }
 
 #generated-main-icon {
@@ -107,14 +108,15 @@ input {
   font-weight: 700;
 }
 
-::placeholder {
-  color: #ffff;
-
+.input-location {
+  position: relative;
 }
 
+::placeholder {
+  color: #ffff;
+}
 
 .display-section {
-  /* background-color: lightcoral; */
   display: flex;
   width: 160px;
 }
@@ -133,12 +135,6 @@ ul.display-icons:first-child {
   width: 38px;
 }
 
-/* ul.display-text {
-  display: flex;
-  flex-flow: column wrap;
-  row-gap: 30px;
-} */
-
 span.display-text {
   line-height: 28px;
   font-size: var(--font-display-text);
@@ -151,7 +147,6 @@ span.display-text-output {
   margin-bottom: 15px;
 }
 
-
 .second-section {
   display: flex;
   flex: 1;
@@ -159,20 +154,16 @@ span.display-text-output {
   max-width: 100%;
   height: 500px;
   position: relative;
-
 }
 
 .slides {
   display: flex;
   width: 100%;
-  /* position: absolute;
-  top: 30px */
 }
 
 .options {
   display: flex;
   align-items: center;
-  
 }
 
 .options-buttons {
@@ -196,10 +187,7 @@ span.display-text-output {
   width: 13px;
 }
 
-
-
 div.week-weather {
-  /* background-color: red; */
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   flex: 1;
@@ -218,10 +206,7 @@ div.week-weather {
   transition-delay: 0ms;
 }
 
-
-
 div.daily-weather {
-  /* background-color: red; */
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   flex: 1;
@@ -229,7 +214,6 @@ div.daily-weather {
 }
 
 div.day-weather {
-  /* border: 1px solid white; */
   display: grid;
   padding-left: 30%;
 }
@@ -277,25 +261,25 @@ div.day-weather {
     font-size: 13px;
     font-weight: var(--font-weight-date-time);
   }
-  
+
   p.city {
     margin-bottom: 7px;
   }
-  
+
   p.time {
     margin-bottom: 13px;
   }
-  
+
   h1.temp {
     font-size: 47px;
     font-weight: var(--font-weight);
     margin-bottom: 0;
   }
-  
+
   p.temp-conversion {
     font-size: 11px;
   }
-  
+
   #cloudy {
     width: 90px;
   }
@@ -311,73 +295,70 @@ div.day-weather {
     font-size: 12px;
   }
 
-
   .display-section {
     width: 145px;
   }
-  
+
   ul.display-icons {
     display: flex;
     flex-flow: column wrap;
     row-gap: 32px;
     width: 43px;
   }
-  
+
   ul.display-icons:first-child {
     margin-top: 6px;
   }
   .icons {
     width: 32px;
   }
-  
+
   span.display-text {
     line-height: 25px;
     font-size: 11px;
   }
-  
+
   span.display-text-output {
     font-size: 21px;
     margin-bottom: 12px;
   }
 
-
-  
   .options-buttons {
     padding: 6px 12px;
     margin-right: 25px;
     font-size: 12px;
   }
-  
+
   .nav-button {
     font-weight: 700;
     width: 7px;
     margin-right: 8px;
   }
-  
+
   .prev-next {
     width: 10px;
   }
-  
+
   div.day-weather {
     padding-left: 20%;
   }
-  
+
   .day-carousel {
     font-size: 15px;
     font-weight: 500;
     margin-top: 23px;
     margin-bottom: 8px;
   }
-  
+
   .temperature-carousel {
     font-size: 24px;
     line-height: 20px;
   }
-  
+
   .temperature-carousel-lowest {
     font-size: 11px;
   }
-  
+
   .weather-carousel-icon {
     width: 40px;
     margin-top: 8px;
@@ -403,26 +384,26 @@ div.day-weather {
     font-size: 9px;
     font-weight: var(--font-weight-date-time);
   }
-  
+
   p.city {
     font-size: 12px;
     margin-bottom: 7px;
   }
-  
+
   p.time {
     margin-bottom: 8px;
   }
-  
+
   h1.temp {
     font-size: 38px;
     font-weight: var(--font-weight);
     margin-bottom: 2px;
   }
-  
+
   p.temp-conversion {
     font-size: 10px;
   }
-  
+
   #cloudy {
     width: 75px;
     margin-top: 17px;
@@ -439,75 +420,72 @@ div.day-weather {
     font-size: 10px;
   }
 
-
   .display-section {
-    width: 122px; /* adasd */
+    width: 122px;
   }
-  
+
   ul.display-icons {
     display: flex;
     flex-flow: column wrap;
     row-gap: 32px;
     width: 30px;
   }
-  
+
   ul.display-icons:first-child {
     margin-top: 6px;
   }
   .icons {
     width: 23px;
   }
-  
+
   span.display-text {
     line-height: 20px;
     font-size: 9px;
     font-weight: 500;
   }
-  
+
   span.display-text-output {
     font-size: 18px;
     margin-bottom: 11px;
   }
 
-
-  
   .options-buttons {
     padding: 5px 10px;
     margin-right: 16px;
     font-size: 9px;
   }
-  
+
   .nav-button {
     font-weight: 700;
     width: 7px;
     margin-right: 6px;
   }
-  
+
   .prev-next {
     width: 7px;
   }
-  
+
   div.day-weather {
     padding-left: 10%;
     line-height: 5px;
   }
-  
+
   .day-carousel {
     font-size: 13px;
     font-weight: 500;
     margin-top: 20px;
     margin-bottom: 13px;
   }
-  
+
   .temperature-carousel {
     font-size: 17px;
     line-height: 18px;
   }
-  
+
   .temperature-carousel-lowest {
     font-size: 10px;
   }
-  
+
   .weather-carousel-icon {
     width: 33px;
   }
